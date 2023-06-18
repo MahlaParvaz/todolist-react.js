@@ -1,0 +1,155 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  background: #dbeafe;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: sans-serif;
+}
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(225, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.completed {
+  text-decoration: line-through #ef4444;
+  color: #ccc;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px;
+  width: 275px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+.btn {
+  border: none;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  color: #ef4444;
+}
+form {
+  display: flex;
+  border-radius: 10px;
+  width: 270px;
+  /* height: 26px; */
+  background-color: #fff;
+  padding: 0px 10px;
+}
+input {
+  outline: none;
+  padding: 12px 15px;
+  border: none;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+}
+form .btn {
+  font-size: 22px;
+  padding: 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #6d28d9;
+}
+
+/* body {
+  overflow: hidden;
+}
+.App .ball {
+  position: absolute;
+  filter: blur(170px);
+}
+.App .ball:nth-child(1) {
+  top: -300px;
+  right: -5px;
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  background: #a78bfa;
+  transform: rotate(0.4turn);
+}
+
+.App .ball:nth-child(2) {
+  bottom: -100px;
+  left: 40px;
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  background: #e879f9;
+  transform: rotate(0.4turn);
+} */
+
+/* .App .ball:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background: blue;
+} */
+/* .App::before {
+  content: '';
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background: linear-gradient(#08ffe6, #fcd200);
+  transform: translate(-550px, -220px);
+}
+.App::after {
+  content: '';
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background: linear-gradient(#08ffe6, #fcd200);
+  transform: translate(550px, 220px);
+} */
+/* .App .ballOne {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: green;
+  transform: translate(-250px, 200px);
+  position: absolute;
+}
+.App .ballTwo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: red;
+  transform: translate(-10px, -220px);
+  position: absolute;
+}
+.App .ballThree {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: blue;
+  transform: translate(150px, 250px);
+  position: absolute;
+} */
