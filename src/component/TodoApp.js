@@ -1,11 +1,13 @@
-import NavBar from './NavBar';
 import '../App.css';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState([]);
+  const initialState = JSON.parse(localStorage.getItem('todo')) || [];
+  const [input, setInput] = useState('');
+  const [todos, setTodos] = useState(initialState);
+  const [editTodo, setEditTodo] = useState(null);
   const checkHandler = (id) => {
     const index = todos.findIndex((todo) => todo.id === id);
     const selectedTodo = { ...todos[index] };
@@ -14,34 +16,24 @@ const TodoApp = () => {
     updatedTodos[index] = selectedTodo;
     setTodos(updatedTodos);
   };
-
-  const addTodoHandler = (input) => {
-    // console.log(input);
-    const newTodo = {
-      id: Math.floor(Math.random() * 1000),
-      text: input,
-      isCompleted: false,
-    };
-    setTodos([...todos, newTodo]);
-  };
-
-  const updateTodo = (id, newValue) => {
-    const index = todos.findIndex((todo) => todo.id === id);
-    const selectedTodo = { ...todos[index] };
-    selectedTodo.text = newValue;
-    const updatedTodos = [...todos];
-    updatedTodos[index] = selectedTodo;
-    setTodos(updatedTodos);
-  };
+  useEffect(() => {
+    localStorage.setItem('todo', JSON.stringify(todos));
+  }, [todos]);
   return (
     <section className="container">
-      <NavBar />
-      <TodoForm submitTodo={addTodoHandler} />
+      <TodoForm
+        input={input}
+        setInput={setInput}
+        todos={todos}
+        setTodos={setTodos}
+        editTodo={editTodo}
+        setEditTodo={setEditTodo}
+      />
       <TodoList
         todos={todos}
         onCheck={checkHandler}
         setTodos={setTodos}
-        onUpdateTodo={updateTodo}
+        setEditTodo={setEditTodo}
       />
     </section>
   );
