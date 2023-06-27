@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { BsPlusCircleFill } from 'react-icons/bs';
-import Header from './Header';
 
 const TodoForm = ({
   input,
@@ -49,7 +48,7 @@ const TodoForm = ({
     }
   };
   return (
-    <section className='header'>
+    <section>
       <form onSubmit={submitHandler}>
         <input
           type="text"
@@ -61,7 +60,6 @@ const TodoForm = ({
           <BsPlusCircleFill />
         </button>
       </form>
-      <Header />
     </section>
   );
 };

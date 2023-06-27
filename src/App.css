@@ -11,22 +11,38 @@ body {
   display: flex;
   font-family: sans-serif;
 }
+.App .ball {
+  position: absolute;
+  filter: blur(170px);
+}
+.App .ball:nth-child(1) {
+  top: -300px;
+  right: -5px;
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  background: #a78bfa;
+  transform: rotate(0.4turn);
+}
+
+.App .ball:nth-child(2) {
+  bottom: -100px;
+  left: 40px;
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  background: #e879f9;
+  transform: rotate(0.4turn);
+}
 .container {
   position: relative;
-  width: 400px;
+  width: 380px;
   height: 400px;
   overflow-y: auto;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  padding: 20px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(225, 255, 255, 0.1);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 12px;
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -41,8 +57,8 @@ body {
   align-items: center;
   background-color: #fff;
   border-radius: 5px;
-  padding: 8px;
-  width: 380px;
+  padding: 10px;
+  width: 360px;
   height: auto;
   margin-top: 20px;
   cursor: pointer;
@@ -67,8 +83,7 @@ body {
 form {
   display: flex;
   border-radius: 5px;
-  width: 250px;
-  /* height: 26px; */
+  width: 240px;
   background-color: #fff;
   padding: 0px 10px;
 }
@@ -79,6 +94,7 @@ input {
   width: 100%;
   align-items: center;
   border-radius: 5px;
+  font-size: 14px;
 }
 form .btn {
   font-size: 22px;
@@ -89,91 +105,84 @@ form .btn {
   cursor: pointer;
   color: #6d28d9;
 }
-
-.App .ball {
-  position: absolute;
-  filter: blur(170px);
-}
-.App .ball:nth-child(1) {
-  top: -300px;
-  right: -5px;
-  border-radius: 50%;
-  width: 700px;
-  height: 700px;
-  background: #a78bfa;
-  transform: rotate(0.4turn);
-}
-
-.App .ball:nth-child(2) {
-  bottom: -100px;
-  left: 40px;
-  border-radius: 50%;
-  width: 550px;
-  height: 550px;
-  background: #e879f9;
-  transform: rotate(0.4turn);
+.addText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* header {
-  font-size: 14px;
-  width: 110px;
-} */
+
 .select {
   border-radius: 10px;
   outline: none;
   font-size: 14px;
-  width: 120px;
+  width: 110px;
 }
-/* .App .ball:nth-child(3) {
-  bottom: 50px;
-  right: 100px;
-  width: 300px;
-  height: 300px;
-  background: blue;
-} */
-/* .App::before {
-  content: '';
-  position: absolute;
-  height: 600px;
-  width: 600px;
-  border-radius: 50%;
-  background: linear-gradient(#08ffe6, #fcd200);
-  transform: translate(-550px, -220px);
+
+.navbar {
+  background-color: #6d28d9;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
 }
-.App::after {
-  content: '';
-  position: absolute;
-  height: 600px;
-  width: 600px;
-  border-radius: 50%;
-  background: linear-gradient(#08ffe6, #fcd200);
-  transform: translate(550px, 220px);
-} */
-/* .App .ballOne {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: green;
-  transform: translate(-250px, 200px);
-  position: absolute;
+.app {
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(225, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.App .ballTwo {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  background: red;
-  transform: translate(-10px, -220px);
-  position: absolute;
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
 }
-.App .ballThree {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: blue;
-  transform: translate(150px, 250px);
-  position: absolute;
-} */
+.date {
+  display: flex;
+  justify-content: space-around;
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  color: #fff;
+}
+.currDay {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+}
+.month-year {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.time {
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+}
+.day {
+  font-size: 14px;
+}
+.currTime {
+  font-size: 18px;
+  font-weight: 600;
+}

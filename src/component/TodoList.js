@@ -1,4 +1,5 @@
 import Todos from './Todos';
+import '../App.css';
 
 const TodoList = ({ todos, onCheck, setTodos, setEditTodo }) => {
   const editHandler = ({ id }) => {
@@ -12,7 +13,7 @@ const TodoList = ({ todos, onCheck, setTodos, setEditTodo }) => {
   };
 
   const renderTodos = () => {
-    if (todos.length === 0) return <p>add some text</p>;
+    if (todos.length === 0) return <p className='addText'>add some text</p>;
     return todos.map((todo) => {
       return (
         <Todos

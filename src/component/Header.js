@@ -7,10 +7,10 @@ const options = [
   { value: 'Uncompleted', label: 'Uncompleted' },
 ];
 
-const Header = () => {
+const Header = ({ onChange, selectedOption }) => {
   return (
     <header className="select">
-      <Select options={options} />
+      <Select options={options} onChange={onChange} value={selectedOption} />
     </header>
   );
 };
