@@ -1,9 +1,8 @@
 #Demo
 
 
+https://github.com/MahlaParvaz/todolist-react.js/assets/107788139/e9b7407a-81e7-457f-8f23-1d39261a84ba
 
-
-https://github.com/MahlaParvaz/todolist-react.js/assets/107788139/724e6da7-91d8-45eb-a106-a283fb93965a
 ![todo-output](https://github.com/MahlaParvaz/todolist-react.js/assets/107788139/428fd6d9-45ea-40e1-888f-1b79fd4909dd)
 
 
